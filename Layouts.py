@@ -74,3 +74,17 @@ business_insights = [
 for insight in business_insights:
     placeholder.write(insight)
     time.sleep(2)
+
+st.subheader("Interactive Revenue Checker")
+quarters = ["Q1 2024", "Q2 2024", "Q3 2024", "Q4 2024"]
+selected_quarter = st.selectbox("Select a quarter:", quarters)
+
+st.write(f"Revenue for [selected_quarter}: {sales_data[selected_quarter]}")
+
+growth = st.slider("Adjust growth percentage:", 0, 50, 10)
+base_revenue = float(sales_data[selected_quarter].strip("$M)"))
+adjusted_revenue = base_revenue * (1 + growth / 100)
+st.write(f"Adjust Revenue for {selected_quarter}:$ {adjusted_revenue:.2f}M")
+
+if st,button("Show Motivation"):
+    st.success("Keep pushing for growth!")
