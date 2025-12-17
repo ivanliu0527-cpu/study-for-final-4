@@ -86,5 +86,5 @@ base_revenue = float(sales_data[selected_quarter].strip("$M)"))
 adjusted_revenue = base_revenue * (1 + growth / 100)
 st.write(f"Adjust Revenue for {selected_quarter}:$ {adjusted_revenue:.2f}M")
 
-if st,button("Show Motivation"):
+if st.button("Show Motivation"):
     st.success("Keep pushing for growth!")
