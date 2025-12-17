@@ -79,7 +79,7 @@ st.subheader("Interactive Revenue Checker")
 quarters = ["Q1 2024", "Q2 2024", "Q3 2024", "Q4 2024"]
 selected_quarter = st.selectbox("Select a quarter:", quarters)
 
-st.write(f"Revenue for [selected_quarter}: {sales_data[selected_quarter]}")
+st.write(f"Revenue for {selected_quarter}: {sales_data[selected_quarter]}")
 
 growth = st.slider("Adjust growth percentage:", 0, 50, 10)
 base_revenue = float(sales_data[selected_quarter].strip("$M)"))
